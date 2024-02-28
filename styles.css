@@ -1,0 +1,214 @@
+@import"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+ *,*::before,*::after{
+    box-sizing: content-box;
+  }
+
+  :root{
+    --darkest:#5585b5;
+    --dark: #53a8b6;
+    --light: #79c2d0;
+    --lightest: #bbe4e9;
+  }
+
+  html{scroll-behavior: smooth;}
+
+  body{
+    margin:0; 
+    background: var(--light);
+    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-weight: 600;
+    font-style: normal;
+    height:100%;
+     
+  }
+
+
+  *.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+
+  .btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    transition: all 0.3s ease-in;
+    font-size: 0.875rem;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    border-color: black;
+    border-radius: 0;
+    margin: 10px;
+    padding: 15px;
+    text-decoration-line:none;
+    font-family: "Amazon Ember",sans-serif;
+  }
+  .btn:hover{
+    border-color: white;
+  }
+  .center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .landingPage{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    height: 100svh;
+  }
+  #catch{
+    letter-spacing: 0.03rem;;
+    line-height: 1.25;
+    margin: 0rem;
+    text-align: center;
+    font-size: xx-large;
+  }
+  
+
+  h1,h2,h3{
+    font-size: larger;
+    margin: 25px 0px;
+    padding: 8px 16px;
+    width:200px;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+  }
+
+  p{
+    padding: 1rem;
+  }
+  .section{
+    margin: 10px;
+    padding: 5px;
+    letter-spacing: 0.01rem;
+    line-height: 1.5rem;
+    background-color: var(--lightest);
+    transition: opacity 1s;
+    opacity:1;
+    border-radius: 1rem;
+  }
+  .grid{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    
+  }
+  .belowLanding{
+    padding: 2rem;
+    height:100svh;
+  }
+
+
+/* animates text highlighting */
+  .boujee-text {
+    --bg-size: 300%;
+    --color-one: #000;
+    --color-two: #6fd4d6;
+    background:linear-gradient(90deg,var(--color-one),var(--color-two),var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color:transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+    font-weight:500;
+    --tw-brightness: brightness(1.25);
+    
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+      animation:move-bg 6s linear infinite reverse
+    }
+    @keyframes move-bg {
+      to {
+        background-position:var(--bg-size) 0
+      }
+    }
+  }
+/* -------------------------- */
+
+  form{
+    width:100%;
+
+  }
+  input{
+    border-top: 2px rgb(181, 245, 224);
+    border-left: 2px rgb(181, 245, 224);
+    border-right: 2px rgb(181, 245, 224);
+    border-color: black;
+    background: transparent;
+    margin: 8px 0;
+    color: rgb(23, 109, 159);
+    font-family: "Amazon Ember",sans-serif;
+    
+  }
+  textarea{
+    border-top: 2px whitesmoke;
+    border-left: 2px whitesmoke;
+    border-right: 2px whitesmoke;
+    background: transparent;
+    margin: 8px 0;
+    color: rgb(23, 109, 159);
+    border-color: black;
+    font-family: "Amazon Ember",sans-serif;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    
+  }textarea:focus, input:focus{
+    outline: none;
+  }
+  #submit{
+    box-sizing:border-box;
+  }
+
+    
+  .top-link {
+    float: right;
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: rgb(76, 142, 170);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    color: white;
+    visibility: hidden;
+    z-index: -100;
+  }
+  .show-link {
+    visibility: visible;
+    z-index: 100;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .section {
+      margin: 10px;
+      padding: 10px;
+      width: 90%; /* section fills screen when the viewport is 800px or smaller */
+    }
+    ul.navbar{
+      visibility: hidden;
+    }
+    .grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
