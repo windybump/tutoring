@@ -14,12 +14,11 @@
   html{scroll-behavior: smooth;}
 
   body{
-    margin:0; 
+    margin:100px; 
     background: var(--light);
     font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
     font-weight: 600;
     font-style: normal;
-    height:100%;
      
   }
 
@@ -35,11 +34,12 @@
 
 
   .btn {
+    position: relative;
     text-transform: uppercase;
     background: transparent;
     color: black;
     padding: 0.375rem 0.75rem;
-    display: inline-block;
+    display: block;
     transition: all 0.3s ease-in;
     font-size: 0.875rem;
     border: 2px solid white;
@@ -52,6 +52,8 @@
     padding: 15px;
     text-decoration-line:none;
     font-family: "Amazon Ember",sans-serif;
+    top: 50%;
+    
   }
   .btn:hover{
     border-color: white;
@@ -65,28 +67,34 @@
     transform: translate(-50%, -50%);
   }
   .landingPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
-    height: 100svh;
+    
   }
   #catch{
+    position: relative;
+    display: block;
     letter-spacing: 0.03rem;;
     line-height: 1.25;
-    margin: 0rem;
+    margin: 1rem;
     text-align: center;
-    font-size: xx-large;
+    top: 50%;
   }
   
 
   h1,h2,h3{
     font-size: larger;
-    margin: 25px 0px;
-    padding: 8px 16px;
+    margin: 25px 5px;
+    padding: 8px 20px;
     width:200px;
     overflow: hidden;
     background-color: #333;
     color: white;
+    border-radius: 10px;
   }
 
   p{
@@ -94,13 +102,13 @@
   }
   .section{
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
     letter-spacing: 0.01rem;
     line-height: 1.5rem;
     background-color: var(--lightest);
     transition: opacity 1s;
-    opacity:1;
-    border-radius: 1rem;
+    border-radius: 10px;
+    height: fit-content;
   }
   .grid{
     display: grid;
@@ -110,8 +118,8 @@
     
   }
   .belowLanding{
-    padding: 2rem;
-    height:100svh;
+    padding: 0 2rem;
+    height:100%;
   }
 
 
@@ -125,7 +133,7 @@
     -webkit-background-clip:text;
     background-clip:text;
     font-weight:500;
-    --tw-brightness: brightness(1.25);
+    font-size: xx-large;
     
   }
   @media (prefers-reduced-motion: no-preference) {
@@ -142,7 +150,7 @@
 
   form{
     width:100%;
-
+    
   }
   input{
     border-top: 2px rgb(181, 245, 224);
@@ -199,6 +207,9 @@
 
 
   @media screen and (max-width: 800px) {
+    body{
+      margin: 0
+    }
     .section {
       margin: 10px;
       padding: 10px;
